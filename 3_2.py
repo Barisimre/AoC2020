@@ -3,11 +3,7 @@ import math
 def lines():
     words = []
     with open("3.txt") as fp:
-        line = fp.readline()
-        while line:
-            words.append(line)
-            line = fp.readline()
-    return words
+        return fp.readlines()
 
 def process_lines():
     pre = lines()
