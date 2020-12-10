@@ -29,7 +29,7 @@ def count(num, l):
         return 1
     for a in l:
         if a - num < 4:
-            cs += count(a, tuple(l[p:])) # something something lists are not hashale something
+            cs += count(a, tuple(l[p:])) # something something lists are not hashable something
         p += 1
     return cs
 
