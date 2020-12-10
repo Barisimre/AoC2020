@@ -15,9 +15,12 @@ def process_lines():
 lines = process_lines()
 end = max(lines)+3
 lines.append(end)
+call = 0
 
 @functools.lru_cache(maxsize=None)
 def count(num, l):
+    global call
+    call += 1
     l = list(l)
     global end
     cs = 0
@@ -31,3 +34,4 @@ def count(num, l):
     return cs
 
 print(count(0, tuple(lines)))
+print(call)
